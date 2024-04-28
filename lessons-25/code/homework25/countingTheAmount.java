@@ -1,4 +1,4 @@
-package homework_l25;
+package homework25;
 // задание: сумма чисел.
 
 import java.util.Scanner;
