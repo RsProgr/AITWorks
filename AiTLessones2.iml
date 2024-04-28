@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="4">
+  <component name="AdditionalModuleElements">
+    <content url="file://$MODULE_DIR$" dumb="true">
+      <sourceFolder url="file://$MODULE_DIR$/lessons-03/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lessons-04/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lessons-05/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lessons-06/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lessons-07/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lessons-08/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lessons-09/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lessons-10/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lessons-11/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lessons-12/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lessons-13/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lessons-14/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lessons-15/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lessons-16/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lessons-17/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lessons-18/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lessons-19/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lessons-20/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lessons-21/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lessons-22/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lessons-23/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lessons-24/code" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/lessons-25/code" isTestSource="false" />
+    </content>
+  </component>
+</module>
