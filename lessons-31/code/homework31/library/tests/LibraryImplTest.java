@@ -1,13 +1,12 @@
-package homework31.library.dao;
+package homework31.library.tests;
 
+import homework31.library.dao.Library;
+import homework31.library.dao.LibraryImpl;
 import homework31.library.model.Book;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
-import static org.junit.jupiter.api.Assertions.assertNull;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryImplTest {
     Library library;
@@ -69,5 +68,25 @@ class LibraryImplTest {
         library.addBook(book[1]);
         library.addBook(book[2]);
         library.printBook();
+    }
+
+    @Test
+    void testAddBook() {
+    }
+
+    @Test
+    void testRemoveBook() {
+    }
+
+    @Test
+    void testFindBook() {
+    }
+
+    @Test
+    void testQuantity() {
+    }
+
+    @Test
+    void testPrintBook() {
     }
 }
