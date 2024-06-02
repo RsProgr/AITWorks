@@ -72,11 +72,25 @@ class LibraryImplTest {
 
     @Test
     void testAddBook() {
+        //нельзя добавить null
+        assertFalse(library.addBook(null));
+        //нельзя добавить второй раз уже имеющуюся книгу
+        assertTrue(library.addBook(book[1]));
+        //добавляем книгу
+        Book book = new Book("George Orwell", 1949, 9780452284234L, "1984");
+        assertTrue(library.addBook(book));
+        //проверяем количество после добавления
+        assertEquals(2,library.quantity());
+        //нельзя превысить capacity
+        Book bookOneMore = new Book("Jane Austen", 1813, 9780141439518L, "Pride and Prejudice");
+        assertTrue(library.addBook(bookOneMore));
+
+        library.printBook();
+
+
     }
 
-    @Test
-    void testRemoveBook() {
-    }
+  //
 
     @Test
     void testFindBook() {
@@ -88,5 +102,25 @@ class LibraryImplTest {
 
     @Test
     void testPrintBook() {
+    }
+
+    @Test
+    void testAddBook1() {
+    }
+
+    @Test
+    void testRemoveBook1() {
+    }
+
+    @Test
+    void testFindBook1() {
+    }
+
+    @Test
+    void testQuantity1() {
+    }
+
+    @Test
+    void testPrintBook1() {
     }
 }
