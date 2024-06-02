@@ -46,6 +46,8 @@ public class CompanyAppl {
         for(Employee e : goodEmployee){
             System.out.println(e);
         }
+        Employee UpdateEmployee = company.updateEmployee(101, "White");
+        System.out.println("Update second name: " + UpdateEmployee);
 
     }
 
