@@ -33,8 +33,9 @@ public class CompanyAppl {
         double totalSalary = company.totalSalary();
         System.out.println("Total Salary of company " + totalSalary);
 
+
         //add new employee
-        Employee newEmployee = new Worker(104, "Robert", "Humbert", 26,80,5);
+        Employee newEmployee = new Worker(104, "Robert", "Humbert", 26, 80, 5);
         company.addEmployee(newEmployee);
 
         System.out.println("----------------------------------------------");
@@ -42,14 +43,23 @@ public class CompanyAppl {
         totalSalary = company.totalSalary(); //calculate new total  salary
         System.out.println("Total salary of company: " + totalSalary);
 
+
         Employee[] goodEmployee = company.findEmployeeHoursGreaterThen(100);
-        for(Employee e : goodEmployee){
+        for (Employee e : goodEmployee) {
             System.out.println(e);
         }
         System.out.println("------------------------------------");
         Employee UpdateEmployee = company.updateEmployee(101, "White");
         System.out.println("Update second name: " + UpdateEmployee);
+        System.out.println("------------------------------------------");
 
+        //avg salary
+        double avgSalary = company.avgSalary();
+        System.out.println("Avg Salary of company " + avgSalary);
+        System.out.println("----------------------------------------");
+
+        //total sales
+        double totalSales = company.totalSales();
+        System.out.println("Total sales: " + totalSales);
     }
-
 }

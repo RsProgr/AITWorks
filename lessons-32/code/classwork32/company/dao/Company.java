@@ -23,25 +23,27 @@ public interface Company {
 
     // define abstract methods
     boolean addEmployee(Employee employee);
+
     Employee removeEmployee(int id);
+
     Employee findEmployee(int id);
 
     int quantity(); // quantity of employee
+
     double totalSalary();
+
     double avgSalary();
+
     double totalSales();
+
     void printEmployee();
 
     // список сотрудников "стахановцев"
     Employee[] findEmployeeHoursGreaterThen(int hours);
 
-
     // список сотрудников с зарплатой от ... до ...
     Employee[] findEmployeeSalaryRange(double min, double max);
 
     //new Method update
-    Employee updateEmployee (int id, String secondName);
-
-
-
+    Employee updateEmployee(int id, String secondName);
 }
