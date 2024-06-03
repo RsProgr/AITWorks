@@ -12,4 +12,6 @@ public interface Library {
     int quantity();
 
     void printBook();
+
+    Book updateBook(long isbn, String author);
 }

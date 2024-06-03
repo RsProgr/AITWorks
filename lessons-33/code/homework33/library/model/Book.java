@@ -2,7 +2,7 @@ package homework33.library.model;
 
 import java.util.Objects;
 
-public class Book implements Comparable<Book>{
+public class Book {
     private long isbn;
     private String title;
     private String author;
@@ -62,11 +62,5 @@ public class Book implements Comparable<Book>{
     @Override
     public int hashCode() {
         return Objects.hash(isbn);
-    }
-
-    @Override
-    public int compareTo(Book o) {
-        int res = this.isYear - o.isYear;
-        return res;
     }
 }

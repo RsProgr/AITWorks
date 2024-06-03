@@ -6,10 +6,6 @@ import homework33.library.model.Book;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-import java.util.Comparator;
-
-import static classwork.ArrayAppl.printArray;
 import static org.junit.jupiter.api.Assertions.*;
 
 class LibraryImplTest {
@@ -20,10 +16,10 @@ class LibraryImplTest {
     public void setUp() {
         library = new LibraryImpl(4);
         book = new Book[4];
-        book[0] = new Book("Kazuo Ishiguro", 1965, 9780593318171L, "Klara and the Sun");
-        book[1] = new Book("Andy Weir", 2015, 9780593135204L, "Project Hail Mary");
-        book[2] = new Book("Taylor Jenkins Reid", 1989, 9781524798642L, "Malibu Rising");
-        book[3] = new Book("Colleen Hoover", 2023, 9781542025607L, "Reminders of Him");
+        book[0] = new Book("Kazuo Ishiguro", 2021, 9780593318171L, "Klara and the Sun");
+        book[1] = new Book("Andy Weir", 2021, 9780593135204L, "Project Hail Mary");
+        book[2] = new Book("Taylor Jenkins Reid", 2021, 9781524798642L, "Malibu Rising");
+        book[3] = new Book("Colleen Hoover", 2022, 9781542025607L, "Reminders of Him");
     }
 
     @Test
@@ -72,36 +68,5 @@ class LibraryImplTest {
         library.addBook(book[1]);
         library.addBook(book[2]);
         library.printBook();
-    }
-
-    @Test
-    void testBookComparator() {
-        Comparator<Book> bookComparator = new Comparator<Book>() {
-
-            @Override
-            public int compare(Book o1, Book o2) {
-                return o1.getAuthor().compareTo(o2.getAuthor());
-            }
-        };
-        System.out.println("==========test book sorting by comparator===========");
-        printBook();
-        System.out.println("=======================================================");
-        Arrays.sort(book , bookComparator);
-        printBook();
-    }
-    @Test
-    void testBookComparator2() {
-        Comparator<Book> bookComparator = new Comparator<Book>() {
-
-            @Override
-            public int compare(Book o1, Book o2) {
-                return o1.getInYear() - (o2.getInYear());
-            }
-        };
-        System.out.println("==========test book sorting by comparator===========");
-
-        System.out.println("=======================================================");
-        Arrays.sort(book , bookComparator);
-       printBook();
     }
 }
