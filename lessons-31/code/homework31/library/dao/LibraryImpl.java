@@ -2,20 +2,18 @@ package homework31.library.dao;
 
 import homework31.library.model.Book;
 
-import java.util.Arrays;
-
 public class LibraryImpl implements Library {
-    Book[] book;
+    Book[] books;
     int size;
 
     public LibraryImpl(int capacity) {
-        book = new Book[capacity];
+        books = new Book[capacity];
         size = 0;
     }
 
     @Override
     public boolean addBook(Book book) {
-        if (size + 1 >= this.book.length || book == null) {
+        if (size + 1 >= this.books.length || book == null) {
             return false;
         }
         Book found = findBook(book.getIsbn());
@@ -24,7 +22,7 @@ public class LibraryImpl implements Library {
 
         }
 
-        this.book[size] = book;
+        this.books[size] = book;
         size++;
         return true;
 
@@ -33,8 +31,8 @@ public class LibraryImpl implements Library {
     @Override
     public Book removeBook(long isbn) {
         int index = -1;
-        for (int i = 0; i < this.book.length; i++) {
-            if (this.book[i].getIsbn() == isbn) {
+        for (int i = 0; i < this.books.length; i++) {
+            if (this.books[i].getIsbn() == isbn) {
                 index = i;
                 break;
             }
@@ -42,9 +40,9 @@ public class LibraryImpl implements Library {
         if (index == -1) {
             return null;
         }
-        Book value = this.book[index];
+        Book value = this.books[index];
         for (int i = index + 1; i < this.size; i++) {
-            this.book[i - 1] = this.book[i];
+            this.books[i - 1] = this.books[i];
         }
         this.size -= 1;
         return value;
@@ -53,8 +51,8 @@ public class LibraryImpl implements Library {
     @Override
     public Book findBook(long isbn) {
         for (int i = 0; i < this.size; i++) {
-            if (this.book[i].getIsbn() == isbn) {
-                return this.book[i];
+            if (this.books[i].getIsbn() == isbn) {
+                return this.books[i];
             }
         }
         return null;
@@ -66,7 +64,20 @@ public class LibraryImpl implements Library {
         return this.size;
     }
     @Override
-    public void printBook() {
-        System.out.println(Arrays.toString(this.book));
+    public Book updateBook(long isbn, String author) {
+        for (Book book : books) {
+            if (book.getIsbn() == isbn) {
+                book.setAuthor(author);
+                return book;
+            }
+        }
+        return null;
     }
-}
+        @Override
+        public void printBook () {
+            for (int i = 0; i < books.length; i++) {
+                System.out.println(books[i]);
+            }
+
+        }
+    }
