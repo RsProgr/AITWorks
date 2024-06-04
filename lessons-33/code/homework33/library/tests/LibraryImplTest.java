@@ -19,7 +19,8 @@ class LibraryImplTest {
         book[0] = new Book("Kazuo Ishiguro", 2021, 9780593318171L, "Klara and the Sun");
         book[1] = new Book("Andy Weir", 2021, 9780593135204L, "Project Hail Mary");
         book[2] = new Book("Taylor Jenkins Reid", 2021, 9781524798642L, "Malibu Rising");
-        book[3] = new Book("Colleen Hoover", 2022, 9781542025607L, "Reminders of Him");
+        book[3] = new Book("Taylor Jenkins Reid", 2021, 9781524798642L, "Malibu Rising");
+
     }
 
     @Test
