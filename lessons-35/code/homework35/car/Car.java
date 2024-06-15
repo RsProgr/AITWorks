@@ -1,4 +1,6 @@
 package homework35.car;
+//Сделать пример класса c интерфейсом Comparable по двум полям. Например:
+//автомобили одной марки, но с разным пробегом (или ценой)
 
 public class Car implements Comparable<Car>{
     private String brand;

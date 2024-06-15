@@ -1,4 +1,6 @@
 package homework35.book;
+//Сделать пример класса c интерфейсом Comparable по двум полям. Например:
+//книги одного автора, но с разными годами издания.
 
 public class Book implements Comparable<Book> {
     private String author;

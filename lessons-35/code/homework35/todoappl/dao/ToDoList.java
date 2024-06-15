@@ -1,5 +1,7 @@
 package homework35.todoappl.dao;
 
+// 2) ToDoList - писать приложение
+
 import homework35.todoappl.model.Task;
 
 public interface ToDoList {
