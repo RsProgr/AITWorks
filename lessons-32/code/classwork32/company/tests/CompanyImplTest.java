@@ -59,10 +59,10 @@ class CompanyImplTest {
 
     @Test
     void findEmployee() {
-        // find employee with id = 102
-        assertEquals(e[1], company.findEmployee(102));
-        // find employee with id = 107
-        assertNull(company.findEmployee(107));
+            // find employee with id = 102
+            assertEquals(e[1], company.findEmployee(102));
+            // find employee with id = 107
+            assertNull(company.findEmployee(107));
     }
 
     @Test
