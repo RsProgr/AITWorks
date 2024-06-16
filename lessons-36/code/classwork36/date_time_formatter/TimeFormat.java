@@ -24,6 +24,7 @@ public class TimeFormat {
         System.out.println("-------------------------");
         LocalDate date = dateParse(str); // этот метод должен извлечь из строки дату
         System.out.print(date + " " + date.getDayOfWeek());
+        System.out.println("-------------------------------");
 
     }
 
