@@ -1,6 +1,5 @@
 package classwork36.city_arrays;
 
-
 import java.util.Objects;
 
 public class City implements Comparable<City> {
