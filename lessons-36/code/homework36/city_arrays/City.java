@@ -1,4 +1,5 @@
-package classwork36.city_arrays;
+package homework36.city_arrays;
+//Сделать пример c классом City, изменить естественную (native) сортировку на сортировку по имени города (по алфавиту)
 
 import java.util.Objects;
 
@@ -64,8 +65,7 @@ public class City implements Comparable<City> {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof City city)) return false;
-        // return Objects.equals(name, city.name) && Objects.equals(country, city.country);
-        return this.name.equals(((City) o).name) && this.country.equals(((City) o).country);
+        return this.name.equals(city.name) && this.country.equals(city.country);
     }
 
     @Override
@@ -75,6 +75,6 @@ public class City implements Comparable<City> {
 
     @Override
     public int compareTo(City o) {
-        return Integer.compare(this.population, o.population); // native sorting by population
+        return this.name.compareTo(o.name); // native sorting by city name
     }
 }
