@@ -1,8 +1,6 @@
 package homework35.todoappl;
 
-import homework35.todoappl.dao.ToDoListImpl;
 import homework35.todoappl.model.Menu;
-import homework35.todoappl.model.Task;
 
 import java.util.Scanner;
 
@@ -10,44 +8,25 @@ public class ToDoListAppl {
     public static void main(String[] args) {
         // greeting
         System.out.println("Welcome to ToDo Application!");
-        ToDoListImpl toDoList = new ToDoListImpl(10);
-        int id = 0;
+        Menu[] menu = Menu.values();
+        for (int i = 0; i < menu.length; i++) {
+            System.out.println(i + 1 + " - " + menu[i].getTask());
 
-        // начало цикла
+        }
+        Scanner scanner = new Scanner(System.in);
         while (true) {
-            // print menu
-            Menu.printMenu(); // статический метод вызывается по имени класса
-            // ask choice
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Input your choice: ");
+            System.out.println("Input you choice: ");
             int choice = scanner.nextInt();
-            // execute
             switch (choice) {
-                case 1: {
-                    scanner.nextLine();
-                    System.out.println("Input task: ");
-                    String task = scanner.nextLine();
-                    Task newTask = new Task(id, task, id + 1);
-                    toDoList.addTask(newTask);
-                    break;
-                }
-                case 2: {
-                    System.out.println("Your tasks: ");
-                    toDoList.viewTasks();
-                    break;
-                }
-                case 3: {
-                    System.out.println("Input task number to remove: ");
-                    int taskNumber = scanner.nextInt();
-                    Task removedTask = toDoList.removeTask(taskNumber - 1);
-                    System.out.println(removedTask + " is removed.");
-                    break;
-                }
-                case 4:
+                case 1 -> System.out.println("First recording: " + menu[choice - 1].getTask());
+                case 2 -> System.out.println("next task: " + menu[choice - 1].getTask());
+                case 3 -> System.out.println("third task: " + menu[choice - 1].getTask());
+                case 4 -> System.out.println("fourth task: " + menu[choice - 1].getTask());
+                case 5 -> {
+                    System.out.println("Exit: " + menu[choice - 1].getTask());
                     return;
-                default: {
-                    System.out.println("Wrong input.");
                 }
+                default -> System.out.println("Wrong choice!");
             }
         }
     }

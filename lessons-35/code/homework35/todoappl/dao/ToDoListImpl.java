@@ -4,77 +4,76 @@ package homework35.todoappl.dao;
 import homework35.todoappl.model.Task;
 
 import java.time.LocalDateTime;
-import java.util.Arrays;
 
 public class ToDoListImpl implements ToDoList {
 
-    //fields
     private Task[] tasks;
-    private int capacity;
-    private int quantity;
+    private int size;
 
-    private LocalDateTime time; // TODO - добавить дату и время создания задачи
-
-    // constructor
-    public ToDoListImpl(int capacity){
-        tasks = new Task[capacity]; // можно использовать ArrayList
-        this.quantity = 0;
+    public ToDoListImpl(int size) {
+        this.tasks = new Task[size];
+        this.size = 0;
     }
 
     @Override
     public boolean addTask(Task task) {
-        if (task == null || quantity == tasks.length) {
+        if (task == null || size == tasks.length || findTask(task.getId()) != null) {
             return false;
         }
-        tasks[quantity] = task;
-        quantity++;
+        tasks[size++] = task;
         return true;
     }
 
     @Override
+    public void printTask() {
+        for (Task task : tasks) {
+            if (task == null) break;
+            System.out.println(task);
+        }
+
+    }
+
+    @Override
+    public int quantity() {
+        return size;
+    }
+
+    @Override
     public Task removeTask(int id) {
-        // find by id then remove, quantity--
-        for (int i = 0; i < quantity; i++) {
+        for (int i = 0; i < size; i++) {
             if (tasks[i].getId() == id) {
-                Task removedTask = tasks[i];
-                tasks[quantity - 1] = null;
-                quantity--;
-                return removedTask;
+                Task victim = tasks[i];
+                tasks[i] = tasks[--size];
+                tasks[size] = null;
+                return victim;
             }
-            // устанавливаем новые индексы c 0 и подряд
-            for (int j = 0; j < quantity; j++) {
-                tasks[j].setId(j);
-            }
-            // sort tasks
-            Arrays.sort(tasks);
         }
         return null;
     }
 
     @Override
-    public void viewTasks() {
-        // for loop, print tasks
-        // TODO заменить на foreach
-       for (Task task : tasks) {
-           if(task != null){
-               System.out.println(task);
-           }
+    public Task findTask(int id) {
+        for (int i = 0; i < size; i++) {
+            if (tasks[i].getId() == id) {
+                return tasks[i];
+            }
         }
-        System.out.println("You have " + quantity + " tasks.");
+
+        return null;
     }
 
     @Override
-    public Task[] getTasks() {
-        return Arrays.copyOf(tasks, quantity);
+    public Task updateTask(int id, String task) {
+        for (Task task1 : tasks) {
+            if (task1.getId() == id) {
+                return task1;
+            }
+        }
+        return null;
     }
 
     @Override
-    public int quantity() {
-        return quantity;
-    }
-
-    @Override
-    public void exit() {
-
+    public Task[] getTaskDate(LocalDateTime localDateTime) {
+        return new Task[0];
     }
 }

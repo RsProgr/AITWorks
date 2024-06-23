@@ -4,26 +4,22 @@ package homework35.todoappl.dao;
 
 import homework35.todoappl.model.Task;
 
+import java.time.LocalDateTime;
+
 public interface ToDoList {
-    // add task
+
     boolean addTask(Task task);
 
-    // Remove Task
-    Task removeTask(int tasknumber);
+    void printTask();
 
-    // print list of Tasks
-    void viewTasks();
-    //TODO - задачи из списка
-    // подумать над Task[] viewTasks();
-    Task[] getTasks();
-
-    //quantity of tasks
     int quantity();
 
-   // boolean addTask(Task task);
+    Task removeTask(int id);
 
-    //TODO - нужен ли интерфейс метод для выхода из меню?
-    void exit();
+    Task findTask(int id);
 
+    Task updateTask(int id, String task);
+
+    Task[] getTaskDate(LocalDateTime localDateTime);
 
 }

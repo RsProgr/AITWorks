@@ -1,5 +1,6 @@
 package homework35.todoappl.model;
 
+import java.time.LocalDateTime;
 import java.util.Objects;
 
 public class Task implements Comparable<Task> {
@@ -7,22 +8,22 @@ public class Task implements Comparable<Task> {
     private int id; // идентификатор
     private String task; // содержание задачи
     private int taskNumber;
+    private LocalDateTime dateTime;
 
     // constructor
-    public Task(int id, String task, int taskNumber) {
-        this.id = id; // TODO увеличиваем ID при создании задачи
+
+
+    public Task(int id, String task, int taskNumber, LocalDateTime dateTime) {
+        this.id = id;
         this.task = task;
         this.taskNumber = taskNumber;
+        this.dateTime = dateTime;
     }
 
-    // геттеры и сеттеры
     public int getId() {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
 
     public String getTask() {
         return task;
@@ -40,27 +41,35 @@ public class Task implements Comparable<Task> {
         this.taskNumber = taskNumber;
     }
 
+    public LocalDateTime getDateTime() {
+        return dateTime;
+    }
+
+    public void setDateTime(LocalDateTime dateTime) {
+        this.dateTime = dateTime;
+    }
+
     // метод toString
     @Override
     public String toString() {
-        // TODO - должно быть сначала номер задачи, затем ее  текст
         return "Task{" +
-                "task='" + task + '\'' +
+                "id=" + id +
+                ", task='" + task + '\'' +
                 ", taskNumber=" + taskNumber +
+                ", dateTime=" + dateTime +
                 '}';
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Task task = (Task) o;
-        return id == task.id;
+        if (!(o instanceof Task task)) return false;
+        return taskNumber == task.taskNumber;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hashCode(taskNumber);
     }
 
     @Override
