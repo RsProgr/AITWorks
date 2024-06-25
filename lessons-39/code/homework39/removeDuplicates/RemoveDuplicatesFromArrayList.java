@@ -1,4 +1,7 @@
 package homework39.removeDuplicates;
+//Задача 5.(*)
+// Заполните структуру типа ArrayList 20-ю случайными целыми числами в интервале от 1 до 10.
+//Удалите из полученного списка дубликаты.
 
 import java.util.ArrayList;
 import java.util.Random;
