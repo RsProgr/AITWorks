@@ -1,6 +1,7 @@
 package homework39.athletesResults;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -32,6 +33,8 @@ public class RaceResultsAppl {
             Runner runner = new Runner(lastName, firstName, regNumber, club, result);
             runners.add(runner);
         }
+
+        Collections.sort(runners);
         System.out.println("Final competition protocol: ");
 
         for (Runner runner : runners) {

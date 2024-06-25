@@ -4,7 +4,7 @@ package homework39.athletesResults;
 //Создайте приложение, которое позволит ввести в компьютер результаты спортсменов и получить итоговый
 //протокол соревнования.
 
-public class Runner {
+public class Runner implements Comparable<Runner>{
     private String lastName;
     private String firstName;
     private String registrationNumber;
@@ -28,5 +28,10 @@ public class Runner {
                 ", club='" + club + '\'' +
                 ", resultInSeconds=" + resultInSeconds +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Runner o) {
+        return Double.compare(this.resultInSeconds, o.resultInSeconds);
     }
 }
