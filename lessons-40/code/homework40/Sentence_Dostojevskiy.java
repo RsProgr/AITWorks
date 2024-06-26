@@ -18,9 +18,21 @@ public class Sentence_Dostojevskiy {
             uniqueWords.add(s);
         }
 
-
         System.out.println(uniqueWords);
         System.out.println();
         System.out.println("Quantity of unique words in sentence: " + uniqueWords.size());
+
+        String[] symbols = sentence.split(" ");
+        int sy = symbols.length;
+        System.out.println("Symbols in sentence = " + sy);
+
+        Set<String> uniqueSymbols = new HashSet<>();
+
+        for (String symb : symbols) {
+            uniqueSymbols.add(symb);
+        }
+        System.out.println(uniqueSymbols);
+        System.out.println();
+        System.out.println("Quantity of unique words in sentence: " + uniqueSymbols.size());
     }
 }
