@@ -1,9 +1,9 @@
 // 2.5) пишем сначала тесты а потом уже Impl
-package classwork37.album.tests;
+package classwork38.album.tests;
 
-import classwork37.album.dao.Album;
-import classwork37.album.dao.AlbumImpl;
-import classwork37.album.model.Photo;
+import classwork38.album.dao.Album;
+import classwork38.album.dao.AlbumImpl;
+import classwork38.album.model.Photo;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

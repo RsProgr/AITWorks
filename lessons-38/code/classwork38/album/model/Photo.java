@@ -1,5 +1,5 @@
 // 1)
-package classwork37.album.model;
+package classwork38.album.model;
 
 import java.time.LocalDateTime;
 import java.util.Objects;
