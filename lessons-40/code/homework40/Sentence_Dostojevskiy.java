@@ -22,7 +22,7 @@ public class Sentence_Dostojevskiy {
         System.out.println();
         System.out.println("Quantity of unique words in sentence: " + uniqueWords.size());
 
-        String[] symbols = sentence.split(" ");
+        String[] symbols = sentence.split("");
         int sy = symbols.length;
         System.out.println("Symbols in sentence = " + sy);
 
