@@ -6,13 +6,13 @@ public class Task implements Comparable<Task> {
     // fields
     private int id; // идентификатор
     private String task; // содержание задачи
-    private int taskNumber;
+
 
     // constructor
-    public Task(int id, String task, int taskNumber) {
+    public Task(int id, String task) {
         this.id = id; // TODO увеличиваем ID при создании задачи
         this.task = task;
-        this.taskNumber = taskNumber;
+
     }
 
     // геттеры и сеттеры
@@ -32,23 +32,12 @@ public class Task implements Comparable<Task> {
         this.task = task;
     }
 
-    public int getTaskNumber() {
-        return taskNumber;
-    }
-
-    public void setTaskNumber(int taskNumber) {
-        this.taskNumber = taskNumber;
-    }
-
     // метод toString
     @Override
     public String toString() {
         // TODO - должно быть сначала номер задачи, затем ее  текст
-        return "Task{" +
-                "task='" + task + '\'' +
-                ", taskNumber=" + taskNumber +
-                '}';
-    }
+        return " Task"+id + ": " + task ;}
+
 
     @Override
     public boolean equals(Object o) {
@@ -66,6 +55,6 @@ public class Task implements Comparable<Task> {
     @Override
     public int compareTo(Task o) {
         // return this.taskNumber - o.getTaskNumber(); // естественная сортировка по taskNumber, от меньшего к большему
-        return Integer.compare(this.taskNumber, o.taskNumber); // лучший вариант
+        return Integer.compare(this.getId(), o.getId()); // лучший вариант
     }
 }
