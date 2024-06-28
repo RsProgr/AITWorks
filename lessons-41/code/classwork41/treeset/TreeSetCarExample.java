@@ -1,4 +1,4 @@
-package classwork_41.treeset;
+package classwork41.treeset;
 
 import java.util.Comparator;
 import java.util.TreeSet;
