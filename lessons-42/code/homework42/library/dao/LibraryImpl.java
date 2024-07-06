@@ -1,6 +1,6 @@
-package library.dao;
+package homework42.library.dao;
 
-import library.model.Book;
+import homework42.library.model.Book;
 
 public class LibraryImpl implements Library {
     Book[] books;

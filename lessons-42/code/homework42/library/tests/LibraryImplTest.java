@@ -1,8 +1,8 @@
-package library.tests;
+package homework42.library.tests;
 
-import library.dao.Library;
-import library.dao.LibraryHashSetImpl;
-import library.model.Book;
+import homework42.library.dao.Library;
+import homework42.library.dao.LibraryHashSetImpl;
+import homework42.library.model.Book;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -16,7 +16,7 @@ class LibraryImplTest {
     @BeforeEach
     void setUp() {
         library = new LibraryHashSetImpl(4);
-       // library = new LibraryImpl(4);
+        // library = new LibraryImpl(4);
         //library = new LibraryArraysListImpl();
         book = new Book[4];
         book[0] = new Book("Kazuo Ishiguro", 2021, 9780593318171L, "Klara and the Sun");
@@ -69,7 +69,7 @@ class LibraryImplTest {
     }
 
     @Test
-    void updateBook(){
+    void updateBook() {
         library.addBook(book[3]);
         assertNotNull(library.updateBook(9781542025607L, "Andy Weir"));
         assertEquals("Andy Weir", library.findBook(9781542025607L).getAuthor());
@@ -82,6 +82,4 @@ class LibraryImplTest {
         library.addBook(book[2]);
         library.printBook();
     }
-
-
 }

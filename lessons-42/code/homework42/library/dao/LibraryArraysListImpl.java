@@ -1,18 +1,16 @@
-package library.dao;
+package homework42.library.dao;
 
-import library.model.Book;
+import homework42.library.model.Book;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
-public class LibraryHashSetImpl implements Library {
-    private Set<Book> set;
+public class LibraryArraysListImpl implements Library {
+    private List<Book> list;
     private int capacity;
 
-
-    public LibraryHashSetImpl(int capacity) {
-        set = new HashSet<>();
-        this.capacity = capacity;
+    public LibraryArraysListImpl() {
+        this.list = new ArrayList<>();
     }
 
     @Override
@@ -20,21 +18,21 @@ public class LibraryHashSetImpl implements Library {
         if (book == null || this.findBook(book.getIsbn()) != null) {
             return false;
         }
-        this.set.add(book);
+        this.list.add(book);
         return true;
     }
 
     @Override
     public Book removeBook(long isbn) {
         Book book = findBook(isbn);
-        this.set.remove(book);
+        this.list.remove(book);
         return book;
     }
 
 
     @Override
     public Book findBook(long isbn) {
-        for (Book book : this.set) {
+        for (Book book : this.list) {
             if (book.getIsbn() == isbn) {
                 return book;
 
@@ -45,12 +43,12 @@ public class LibraryHashSetImpl implements Library {
 
     @Override
     public int quantity() {
-        return this.set.size();
+        return this.list.size();
     }
 
     @Override
     public void printBook() {
-        System.out.println(this.set);
+        System.out.println(this.list);
     }
 
     @Override

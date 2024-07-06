@@ -1,14 +1,14 @@
-package library.model;
+package homework42.library.model;
 
 import java.util.Objects;
 
-public class Book implements Comparable <Book> {
+public class Book implements Comparable<Book> {
     private long isbn;
     private String title;
     private String author;
     private int isYear;
 
-    public Book(String author, int isYear, long isbn, String title ) {
+    public Book(String author, int isYear, long isbn, String title) {
         this.isbn = isbn;
         this.title = title;
         this.author = author;
