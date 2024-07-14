@@ -1,0 +1,43 @@
+package classwork47.library.test;
+
+import classwork47.library.dao.Library;
+import classwork47.library.dao.LibraryImpl;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+class LibraryImplTest {
+
+    Library library;
+
+
+    @BeforeEach
+    void setUp() {
+        library = new LibraryImpl();
+
+    }
+
+    @Test
+    void addBook() {
+
+    }
+
+    @Test
+    void findBookByAuthor() {
+    }
+
+    @Test
+    void findBookByIsbn() {
+    }
+
+    @Test
+    void rentBook() {
+    }
+
+    @Test
+    void getBackBook() {
+    }
+
+    @Test
+    void quantity() {
+    }
+}
